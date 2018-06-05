@@ -47,8 +47,11 @@ class FG_eval {
     // the Solver function below.
     fg[0] = 0;
 
+    // Update the state cost with a weighted sum of squared state values.
+    // These weights values were chosen from a mixture of trial and error, in regards to simulator performance,
+    // and suggestions from Udacity SDC lessons.
+
     // Reference State Cost
-    // any anything you think may be beneficial.
     for (size_t t = 0; t < N; t++) {
       fg[0] += 0.25 * CppAD::pow(vars[cte_start + t], 2);
       fg[0] += 175.0 * CppAD::pow(vars[epsi_start + t], 2);

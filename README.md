@@ -67,6 +67,9 @@ The vehicle model update functions are as follows:
 
 ![Vehicle Model Update Functions](assets/vehicle_model_update_functions.jpg)
 
+Where `dt` is the elapsed time between states, `Lf` is a vehicle-specific constant to help model the vehicle's steering
+characteristics, and `ψdes` is the desired `ψ` value.
+
 ### Timestep Length and Elapsed Duration (N & dt)
 
 For my implementation, I chose a value of 10 for the timestep length (N) and 0.05 for the Elapsed Duration (dt).  I tried
